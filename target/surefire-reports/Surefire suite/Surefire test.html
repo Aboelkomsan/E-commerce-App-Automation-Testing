@@ -1,0 +1,293 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>14/5/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Dec 31 17:26:20 EET 2022</td>
+</tr>
+<tr><td>Total time:</td><td>193 seconds (193390 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user can click on first slider and goto https://demo.nopcommerce.com/iphone-14 pro", "Home slider Feature"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain &quot;https://demo.nopcommerce.com/iphone-14 pro&quot;. Current url: &quot;https://demo.nopcommerce.com/#&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\taker\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63295}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63295/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b2de9361ab4d3d1f403c3ba3ce2c0440
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDefs.D06_homeSlidersStepDef.verify_sliderLink_opened(D06_homeSlidersStepDef.java:24)
+	at ?.user redirected to the slider link &quot;https://demo.nopcommerce.com/iphone-14 pro&quot;(file:///C:/Users/taker/OneDrive/Desktop/Software%20testing%20course/EGFWD/Second%20Project/demonopcommerce/src/main/resources/features/F06_homeSliders.feature:10)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2040609056", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2040609056'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain &quot;https://demo.nopcommerce.com/iphone-14 pro&quot;. Current url: &quot;https://demo.nopcommerce.com/#&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\taker\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63295}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63295/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b2de9361ab4d3d1f403c3ba3ce2c0440
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDefs.D06_homeSlidersStepDef.verify_sliderLink_opened(D06_homeSlidersStepDef.java:24)
+	at ?.user redirected to the slider link &quot;https://demo.nopcommerce.com/iphone-14 pro&quot;(file:///C:/Users/taker/OneDrive/Desktop/Software%20testing%20course/EGFWD/Second%20Project/demonopcommerce/src/main/resources/features/F06_homeSliders.feature:10)
+</pre></div></td>
+<td>15</td>
+<td>org.example.testRunner.runners@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "hoover on random category and click on random item in it", "Hover on Categories"</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1a71a8510c71ac08dfe4f4fe72335f9d, clickElement {id=fa3c57bc-5622-43ad-9cc8-c132b3efb6d2}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\taker\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63237}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63237/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (1a71a8510c71ac08dfe4f4fe72335f9d)] -&gt; xpath: //ul[@class=&apos;top-menu notmobile&apos;]//ul//li]
+Session ID: 1a71a8510c71ac08dfe4f4fe72335f9d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.example.pages.P03_homePage.select_Random_Elements(P03_homePage.java:94)
+	at org.example.stepDefs.D05_hoverCategoriesStepDef.Select_Randomly_Categories(D05_hoverCategoriesStepDef.java:12)
+	at ?.user hoover on mainCategory and click one randomly,then click random SubCategory and click on its text(file:///C:/Users/taker/OneDrive/Desktop/Software%20testing%20course/EGFWD/Second%20Project/demonopcommerce/src/main/resources/features/F05_hoverCategories.feature:6)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2062828451", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2062828451'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1a71a8510c71ac08dfe4f4fe72335f9d, clickElement {id=fa3c57bc-5622-43ad-9cc8-c132b3efb6d2}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\taker\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63237}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63237/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (1a71a8510c71ac08dfe4f4fe72335f9d)] -&gt; xpath: //ul[@class=&apos;top-menu notmobile&apos;]//ul//li]
+Session ID: 1a71a8510c71ac08dfe4f4fe72335f9d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.example.pages.P03_homePage.select_Random_Elements(P03_homePage.java:94)
+	at org.example.stepDefs.D05_hoverCategoriesStepDef.Select_Randomly_Categories(D05_hoverCategoriesStepDef.java:12)
+	at ?.user hoover on mainCategory and click one randomly,then click random SubCategory and click on its text(file:///C:/Users/taker/OneDrive/Desktop/Software%20testing%20course/EGFWD/Second%20Project/demonopcommerce/src/main/resources/features/F05_hoverCategories.feature:6)
+</pre></div></td>
+<td>19</td>
+<td>org.example.testRunner.runners@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user can click on first slider and goto https://demo.nopcommerce.com/Galaxy-s22-ultra", "Home slider Feature"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain &quot;https://demo.nopcommerce.com/Galaxy-s22-ultra&quot;. Current url: &quot;https://demo.nopcommerce.com/&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\taker\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63267}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63267/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1382bc7e816694a044a1495ffeb231a2
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDefs.D06_homeSlidersStepDef.verify_sliderLink_opened(D06_homeSlidersStepDef.java:24)
+	at ?.user redirected to the slider link &quot;https://demo.nopcommerce.com/Galaxy-s22-ultra&quot;(file:///C:/Users/taker/OneDrive/Desktop/Software%20testing%20course/EGFWD/Second%20Project/demonopcommerce/src/main/resources/features/F06_homeSliders.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2122837918", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2122837918'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain &quot;https://demo.nopcommerce.com/Galaxy-s22-ultra&quot;. Current url: &quot;https://demo.nopcommerce.com/&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\taker\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63267}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63267/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1382bc7e816694a044a1495ffeb231a2
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDefs.D06_homeSlidersStepDef.verify_sliderLink_opened(D06_homeSlidersStepDef.java:24)
+	at ?.user redirected to the slider link &quot;https://demo.nopcommerce.com/Galaxy-s22-ultra&quot;(file:///C:/Users/taker/OneDrive/Desktop/Software%20testing%20course/EGFWD/Second%20Project/demonopcommerce/src/main/resources/features/F06_homeSliders.feature:6)
+</pre></div></td>
+<td>15</td>
+<td>org.example.testRunner.runners@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user opens rss link", "F07_followUs | users could open followUs links"</td>
+<td><div><pre>java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at org.example.stepDefs.D07_followUsStepDef.open_First_Link_inNewTab(D07_followUsStepDef.java:25)
+	at ?.&quot;https://demo.nopcommerce.com/new-online-store-is-open&quot; is opened in new tab(file:///C:/Users/taker/OneDrive/Desktop/Software%20testing%20course/EGFWD/Second%20Project/demonopcommerce/src/main/resources/features/F07_followUs.feature:14)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1132219173", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1132219173'><pre>java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at org.example.stepDefs.D07_followUsStepDef.open_First_Link_inNewTab(D07_followUsStepDef.java:25)
+	at ?.&quot;https://demo.nopcommerce.com/new-online-store-is-open&quot; is opened in new tab(file:///C:/Users/taker/OneDrive/Desktop/Software%20testing%20course/EGFWD/Second%20Project/demonopcommerce/src/main/resources/features/F07_followUs.feature:14)
+</pre></div></td>
+<td>7</td>
+<td>org.example.testRunner.runners@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "guest user could register with valid data successfully", "F01_Register | users could register with new accounts"</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [rgba(76, 177, 124, 1)] but found [rgba(119, 119, 119, 1)]
+	at org.example.stepDefs.D01_registerStepDef.success_message(D01_registerStepDef.java:64)
+	at ?.success message is displayed(file:///C:/Users/taker/OneDrive/Desktop/Software%20testing%20course/EGFWD/Second%20Project/demonopcommerce/src/main/resources/features/F01_Registration.feature:12)
+... Removed 2 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2081952435", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2081952435'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [rgba(76, 177, 124, 1)] but found [rgba(119, 119, 119, 1)]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.stepDefs.D01_registerStepDef.success_message(D01_registerStepDef.java:64)
+	at ?.success message is displayed(file:///C:/Users/taker/OneDrive/Desktop/Software%20testing%20course/EGFWD/Second%20Project/demonopcommerce/src/main/resources/features/F01_Registration.feature:12)
+</pre></div></td>
+<td>11</td>
+<td>org.example.testRunner.runners@36b4cef0</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "search with  SKU", "Search As a user I want to search for a product"</td>
+<td></td>
+<td>9</td>
+<td>org.example.testRunner.runners@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user opens facebook link", "F07_followUs | users could open followUs links"</td>
+<td></td>
+<td>7</td>
+<td>org.example.testRunner.runners@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "search with Product Name", "Search As a user I want to search for a product"</td>
+<td></td>
+<td>7</td>
+<td>org.example.testRunner.runners@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user can select Euro Currency from the dropdown list on the top left of home page", "F03_ChangeCurrencies| user could select currency and chang it from drop down list"</td>
+<td></td>
+<td>7</td>
+<td>org.example.testRunner.runners@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could login with valid email and password", "F02_Login | users could use login functionality to use their accounts"</td>
+<td></td>
+<td>8</td>
+<td>org.example.testRunner.runners@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could login with invalid email and password", "F02_Login | users could use login functionality to use their accounts"</td>
+<td></td>
+<td>7</td>
+<td>org.example.testRunner.runners@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "add the product to wishlist successfully", "user should can Add the product to his wish list"</td>
+<td></td>
+<td>10</td>
+<td>org.example.testRunner.runners@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "search with  SKU", "Search As a user I want to search for a product"</td>
+<td></td>
+<td>8</td>
+<td>org.example.testRunner.runners@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "add the product to wishlist successfully and wait until success message disappear", "user should can Add the product to his wish list"</td>
+<td></td>
+<td>14</td>
+<td>org.example.testRunner.runners@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user opens twitter link", "F07_followUs | users could open followUs links"</td>
+<td></td>
+<td>8</td>
+<td>org.example.testRunner.runners@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "search with Product Name", "Search As a user I want to search for a product"</td>
+<td></td>
+<td>7</td>
+<td>org.example.testRunner.runners@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "search with  SKU", "Search As a user I want to search for a product"</td>
+<td></td>
+<td>7</td>
+<td>org.example.testRunner.runners@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "search with Product Name", "Search As a user I want to search for a product"</td>
+<td></td>
+<td>7</td>
+<td>org.example.testRunner.runners@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user opens youtube link", "F07_followUs | users could open followUs links"</td>
+<td></td>
+<td>10</td>
+<td>org.example.testRunner.runners@36b4cef0</td></tr>
+</table><p>
+</body>
+</html>
